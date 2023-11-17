@@ -1,3 +1,4 @@
+mkdir output > /dev/null
 g++ -c TPunkt.cpp -o output/TPunkt.o
 g++ -c TLinie.cpp -o output/TLinie.o
 g++ -c TRechteck.cpp -o output/TRechteck.o
