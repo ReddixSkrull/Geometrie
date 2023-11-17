@@ -14,6 +14,7 @@ class TLinie : public TPunkt {
 		void setP2(double x, double y);
 		TPunkt getP1() const;
 		TPunkt getP2() const;
+		void setAnzeige(Anzeige* Anzeige);
 		double rufeAnzeige();
 		friend ostream& operator<<(ostream& os, const TLinie& tl);
 };

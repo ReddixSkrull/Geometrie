@@ -4,10 +4,14 @@
 #include "TLinie.hpp"
 #include "TKreis.hpp"
 #include "TRechteck.hpp"
+#include "Anzeige.hpp"
 
 using namespace std;
 
 int main(){
+
+	Anzeige anzeige;
+
 	TPunkt tp;
 	tp.setX(2);
 	tp.setY(2);
@@ -16,10 +20,12 @@ int main(){
 	TPunkt tpA(2,1);
 	TPunkt tpB(2,4);
 	TLinie tl1(tpA, tpB);
+	tl1.setAnzeige(&anzeige);
 	cout << "Linie " <<tl1 << endl;
 	
 	TPunkt kreisZentrum(1,2);
 	TKreis tkreis(kreisZentrum,4.5);
+	tkreis.setAnzeige(&anzeige);
 	cout << "Kreis: " << tkreis << endl;
 
 	TPunkt tp1(1,1);
@@ -27,6 +33,7 @@ int main(){
 	TPunkt tp3(6,5);
 	TPunkt tp4(6,1);
 	TRechteck tr(tp1,tp2,tp3,tp4);
+	tr.setAnzeige(&anzeige);
 	cout << "Rechteck: " << tr << endl;
 
 	cout << "Flaechen:" << endl; 

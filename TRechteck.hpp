@@ -23,6 +23,7 @@ public:
     void setP2(TPunkt tp2);
     void setP3(TPunkt tp3);
     void setP4(TPunkt tp4);
+    void setAnzeige(Anzeige* Anzeige);
     double rufeAnzeige();
     friend ostream& operator<<(ostream& os, const TRechteck& tr);
 };

@@ -39,6 +39,10 @@ double TRechteck::rufeAnzeige(){
     return anzeige->flaeche(*this);
 }
 
+void TRechteck::setAnzeige(Anzeige* anzeige){
+    this->anzeige = anzeige;
+}
+
 ostream& operator<<(ostream& os, const TRechteck& tr){
 	return os << "P1:" << tr.getP1() <<", P2:" << tr.getP2() <<", P3:" << tr.getP3() <<", P4:" << tr.getP4();
 }

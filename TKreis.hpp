@@ -13,7 +13,6 @@ private:
     TPunkt* center;
     double radius;
     Anzeige* anzeige;
-	void initializeAnzeige();
 public:
     TKreis();
     TKreis(TPunkt center, double radius);
@@ -21,6 +20,7 @@ public:
     TPunkt getCenter() const;
     double getRadius() const;
     void setRadius(double radius);
+    void setAnzeige(Anzeige* Anzeige);
     double rufeAnzeige();
     friend ostream& operator<<(ostream& os, const TKreis& tk);
 };

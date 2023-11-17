@@ -36,3 +36,7 @@ double TLinie::rufeAnzeige()
 ostream& operator<<(ostream& os, const TLinie& tl){
     return os << "P1:" <<tl.getP1() << ", P2:" << tl.getP2();
 }
+
+void TLinie::setAnzeige(Anzeige* anzeige){
+    this->anzeige = anzeige;
+}

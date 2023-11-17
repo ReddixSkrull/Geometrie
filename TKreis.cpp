@@ -6,14 +6,9 @@ TKreis::TKreis() {
     setRadius(0.0);
 }
 
-void TKreis::initializeAnzeige() {
-    anzeige = new Anzeige();
-}
-
 TKreis::TKreis(TPunkt center, double radius) {
     this->center = new TPunkt(center);
     this->radius = radius;
-	initializeAnzeige();
 }
 
 void TKreis::setCenter(TPunkt center) {
@@ -34,6 +29,10 @@ void TKreis::setRadius(double radius) {
 
 double TKreis::rufeAnzeige() {
     return anzeige->flaeche(*this);
+}
+
+void TKreis::setAnzeige(Anzeige* anzeige){
+    this->anzeige = anzeige;
 }
 
 ostream& operator<<(ostream& os, const TKreis& tk){
